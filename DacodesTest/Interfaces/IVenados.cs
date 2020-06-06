@@ -16,7 +16,7 @@ namespace DacodesTest.Interfaces
         Task<ResponseObject<List<StatisticsData>>> StatisticsGet();
 
         [Get("/games")]
-        Task<ResponseObject<List<GameData>>> GamesGet();
+        Task<ResponseObject<GameResponse>> GamesGet();
 
         [Get("/players")]
         Task<ResponseObject<PlayersData>> PlayersGet();

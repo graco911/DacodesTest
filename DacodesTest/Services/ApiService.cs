@@ -13,6 +13,7 @@ namespace DacodesTest.Services
         public ApiService()
         {
             var configuredHttpClient = new HttpClient();
+            configuredHttpClient.BaseAddress = new System.Uri(baseUrl);
             configuredHttpClient.DefaultRequestHeaders.Add("Accept", "application/json");
 
             VenadosAPI = RestService.For<IVenados>(configuredHttpClient);

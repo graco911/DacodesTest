@@ -9,7 +9,15 @@ namespace DacodesTest.Views
     {
         public MainPageView()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 }
