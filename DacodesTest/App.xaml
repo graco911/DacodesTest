@@ -1,14 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="DacodesTest.App">
+<Application
+    x:Class="DacodesTest.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
 
     <Application.Resources>
         <ResourceDictionary>
-            <!--Global Styles-->
+
+            <!--#region Font-->
+            <OnPlatform x:Key="FontIconsPayments" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="paymentfont-webfont" />
+                <On Platform="Android" Value="paymentfont-webfont.ttf#PaymentFont" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="FontIcons" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="FontAwesome5FreeSolid" />
+                <On Platform="Android" Value="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" />
+            </OnPlatform>
+
+            <OnPlatform x:Key="FontBrands" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="FontAwesome5BrandsRegular" />
+                <On Platform="Android" Value="Font Awesome 5 Brands-Regular-400.otf#Font Awesome 5 Brands Regular" />
+            </OnPlatform>
+            <!--#endregion-->
+
+            <!--  Global Styles  -->
             <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
@@ -16,5 +35,5 @@
             </Style>
         </ResourceDictionary>
     </Application.Resources>
-    
+
 </Application>

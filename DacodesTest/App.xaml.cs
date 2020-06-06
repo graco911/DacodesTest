@@ -10,7 +10,7 @@ namespace DacodesTest
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainPageView();
         }
 
         protected override void OnStart()
