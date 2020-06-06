@@ -1,12 +1,21 @@
 ﻿using DacodesTest.Interfaces;
 using Refit;
+using System.Net.Http;
 
 namespace DacodesTest.Services
 {
-    public static class ApiService
+    public class ApiService
     {
-        private static string baseUrl = "https://venados.dacodes.mx/api";
+        private string baseUrl = "https://venados.dacodes.mx/api";
 
-        public static IVenados VenadosAPI() => RestService.For<IVenados>(baseUrl);
+        public IVenados VenadosAPI { get; set; }
+
+        public ApiService()
+        {
+            var configuredHttpClient = new HttpClient();
+            configuredHttpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+
+            VenadosAPI = RestService.For<IVenados>(configuredHttpClient);
+        }
     }
 }

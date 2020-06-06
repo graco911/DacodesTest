@@ -1,5 +1,11 @@
-﻿using Refit;
-using System;
+﻿using DacodesTest.Models.Games;
+using DacodesTest.Models.Notifications;
+using DacodesTest.Models.Players;
+using DacodesTest.Models.Responses;
+using DacodesTest.Models.Sponsors;
+using DacodesTest.Models.Statistics;
+using Refit;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DacodesTest.Interfaces
@@ -7,18 +13,18 @@ namespace DacodesTest.Interfaces
     public interface IVenados
     {
         [Get("/statistics")]
-        Task<Object> StatisticsGet();
+        Task<ResponseObject<List<StatisticsData>>> StatisticsGet();
 
         [Get("/games")]
-        Task<Object> GamesGet();
+        Task<ResponseObject<List<GameData>>> GamesGet();
 
         [Get("/players")]
-        Task<Object> PlayersGet();
+        Task<ResponseObject<PlayersData>> PlayersGet();
 
         [Get("/sponsors")]
-        Task<Object> SponsorsGet();
+        Task<ResponseObject<List<SponsorData>>> SponsorsGet();
 
         [Get("/notifications")]
-        Task<Object> NotificationsGet();
+        Task<ResponseObject<List<NotificationData>>> NotificationsGet();
     }
 }
