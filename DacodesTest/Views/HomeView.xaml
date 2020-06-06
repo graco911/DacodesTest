@@ -1,17 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<TabbedPage
     x:Class="DacodesTest.Views.HomeView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
+    xmlns:views="clr-namespace:DacodesTest.Views"
+    NavigationPage.HasNavigationBar="True">
+
+    <Shell.TitleView>
+        <StackLayout
+            Margin="-10"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Image
+                HeightRequest="35"
+                Source="https://venados.dacodes.mx/img/venados.png"
+                WidthRequest="35" />
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </Shell.TitleView>
+
+    <NavigationPage.TitleView>
+
+        <StackLayout
+            Margin="-10"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Image
+                HeightRequest="145"
+                Source="dito_logo_toolbar"
+                WidthRequest="145" />
+        </StackLayout>
+
+    </NavigationPage.TitleView>
+
+    <TabbedPage.Children>
+        <views:COPAMXView Title="COPA MX" />
+        <views:COPAMXView Title="ASCENSO MX" />
+    </TabbedPage.Children>
+</TabbedPage>
