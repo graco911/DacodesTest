@@ -3,8 +3,7 @@
     x:Class="DacodesTest.Views.ASCENSOMXView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:DacodesTest.Views"
-    BackgroundImageSource="grass_pattern">
+    xmlns:views="clr-namespace:DacodesTest.Views">
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
