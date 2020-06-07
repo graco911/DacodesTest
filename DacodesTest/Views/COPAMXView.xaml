@@ -4,6 +4,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:DacodesTest.Views">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 95, 0, 0" />
+    </ContentPage.Padding>
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
@@ -22,8 +25,14 @@
                     <ListView.GroupHeaderTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout BackgroundColor="DimGray" Orientation="Vertical">
-                                    <StackLayout Padding="5" Orientation="Horizontal">
+                                <StackLayout
+                                    BackgroundColor="DimGray"
+                                    Orientation="Vertical"
+                                    VerticalOptions="Center">
+                                    <StackLayout
+                                        Padding="5"
+                                        Orientation="Horizontal"
+                                        VerticalOptions="Center">
                                         <Label
                                             FontAttributes="Bold"
                                             FontSize="Medium"

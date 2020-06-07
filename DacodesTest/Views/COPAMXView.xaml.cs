@@ -18,6 +18,7 @@ namespace DacodesTest.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)

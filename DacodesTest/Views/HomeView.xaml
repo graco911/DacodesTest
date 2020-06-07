@@ -3,13 +3,42 @@
     x:Class="DacodesTest.Views.HomeView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:font="clr-namespace:DacodesTest.Helpers"
     xmlns:local="clr-namespace:DacodesTest.Views"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Home"
-    mc:Ignorable="d">
+    NavigationPage.HasNavigationBar="False">
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <FontImageSource
+                x:Key="COPAMX"
+                FontFamily="{DynamicResource FontIcons}"
+                Glyph="{x:Static font:IconFont.Play}" />
+            <FontImageSource
+                x:Key="ASCENSOMX"
+                FontFamily="{DynamicResource FontIcons}"
+                Glyph="{x:Static font:IconFont.Play}" />
+        </ResourceDictionary>
+    </TabbedPage.Resources>
     <TabbedPage.Children>
-        <local:COPAMXView Title="COPA MX" />
-        <local:ASCENSOMXView Title="ASCENSO MX" />
+        <NavigationPage Title="COPA MX" BarTextColor="White">
+            <NavigationPage.IconImageSource>
+                <OnPlatform x:TypeArguments="FontImageSource">
+                    <On Platform="iOS" Value="{StaticResource COPAMX}" />
+                </OnPlatform>
+            </NavigationPage.IconImageSource>
+            <x:Arguments>
+                <local:COPAMXView />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="ASCENSO MX" BarTextColor="White">
+            <NavigationPage.IconImageSource>
+                <OnPlatform x:TypeArguments="FontImageSource">
+                    <On Platform="iOS" Value="{StaticResource ASCENSOMX}" />
+                </OnPlatform>
+            </NavigationPage.IconImageSource>
+            <x:Arguments>
+                <local:ASCENSOMXView />
+            </x:Arguments>
+        </NavigationPage>
     </TabbedPage.Children>
 </TabbedPage>
