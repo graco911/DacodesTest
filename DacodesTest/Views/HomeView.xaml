@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <TabbedPage.Children>
-        <local:ASCENSOMXView Title="ASCENSO MX" />
         <local:COPAMXView Title="COPA MX" />
+        <local:ASCENSOMXView Title="ASCENSO MX" />
     </TabbedPage.Children>
 </TabbedPage>

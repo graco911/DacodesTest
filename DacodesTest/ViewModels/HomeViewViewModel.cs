@@ -56,8 +56,9 @@ namespace DacodesTest.ViewModels
                 if (requestData.Success)
                 {
                     Games = new List<GameData>(requestData.Result.Games);
-                    ASCENSOMXView.ASCENSOMXViewViewModel.GamesAscenso = new ObservableCollection<GameData>(Games.Where(a => a.League.Equals("Ascenso MX")).ToList());
-                    COPAMXView.COPAMXViewViewModel.GamesCopaMx = new ObservableCollection<GameData>(Games.Where(a => a.League.Equals("Copa MX")).ToList());
+
+                    ASCENSOMXView.ASCENSOMXViewViewModel.CreateGroup(Games.Where(a => a.League.Equals("Ascenso MX")).ToList());
+                    COPAMXView.COPAMXViewViewModel.CreateGroup(Games.Where(a => a.League.Equals("Copa MX")).ToList());
 
                     ASCENSOMXView.ASCENSOMXViewViewModel.IsBusy = false;
                     COPAMXView.COPAMXViewViewModel.IsBusy = false;
