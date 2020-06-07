@@ -11,7 +11,9 @@
                 <CollectionView
                     IsGrouped="True"
                     ItemTemplate="{StaticResource PlayersTemplate}"
-                    ItemsSource="{Binding PlayersGroup}">
+                    ItemsSource="{Binding PlayersGroup}"
+                    SelectionChanged="CollectionView_SelectionChanged"
+                    SelectionMode="Single">
                     <CollectionView.GroupHeaderTemplate>
                         <DataTemplate>
                             <ContentView Padding="10">

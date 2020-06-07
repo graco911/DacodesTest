@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    x:Class="DacodesTest.Views.PlayerDetailView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    BackgroundInputTransparent="True"
+    CloseWhenBackgroundIsClicked="False"
+    HasSystemPadding="False">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+
+    <Frame
+        Margin="40"
+        Padding="10,30,30,10"
+        BackgroundColor="Transparent"
+        CornerRadius="15"
+        HasShadow="True"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <ScrollView>
+            <StackLayout x:Name="LayoutPopup" Padding="10">
+
+                <StackLayout
+                    Padding="20"
+                    BackgroundColor="ForestGreen"
+                    VerticalOptions="Center">
+
+                    <Label
+                        FontSize="Medium"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="FICHA TÉCNICA"
+                        TextColor="White" />
+
+                    <abstractions:CircleImage
+                        x:Name="PlayerImage"
+                        Aspect="AspectFit"
+                        BorderColor="White"
+                        BorderThickness="1"
+                        FillColor="White"
+                        HeightRequest="80"
+                        HorizontalOptions="Center"
+                        WidthRequest="80" />
+                    <Label
+                        x:Name="PlayerName"
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White" />
+                    <Label
+                        x:Name="PlayerPosition"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="White" />
+
+                </StackLayout>
+
+                <StackLayout Padding="20" BackgroundColor="White">
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="FECHA DE NACIMIENTO"
+                        TextColor="DarkGray" />
+                    <Label
+                        x:Name="PlayerBirthdate"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="LightGray" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="LUGAR DE NACIMIENTO"
+                        TextColor="DarkGray" />
+                    <Label
+                        x:Name="PlayerBirthplace"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="LightGray" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="¨PESO"
+                        TextColor="DarkGray" />
+                    <Label
+                        x:Name="PlayerWeight"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="LightGray" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="ALTURA"
+                        TextColor="DarkGray" />
+                    <Label
+                        x:Name="PlayerHeight"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="LightGray" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="EQUIPO ANTERIOR"
+                        TextColor="DarkGray" />
+                    <Label
+                        x:Name="PlayerLastTeam"
+                        FontAttributes="Bold"
+                        FontSize="Micro"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="LightGray" />
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </Frame>
+</pages:PopupPage>

@@ -1,4 +1,6 @@
-﻿using DacodesTest.ViewModels;
+﻿using DacodesTest.Models.Players;
+using DacodesTest.ViewModels;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,5 +17,9 @@ namespace DacodesTest.Views
             BindingContext = PlayersViewViewModel = new PlayersViewViewModel();
         }
 
+        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Navigation.PushModalAsync(new PlayerDetailView((DataPlayer)e.CurrentSelection.First()), true);
+        }
     }
 }
