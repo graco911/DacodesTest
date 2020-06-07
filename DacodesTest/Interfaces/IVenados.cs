@@ -13,7 +13,7 @@ namespace DacodesTest.Interfaces
     public interface IVenados
     {
         [Get("/statistics")]
-        Task<ResponseObject<List<StatisticsData>>> StatisticsGet();
+        Task<ResponseObject<StatisticsResponse>> StatisticsGet();
 
         [Get("/games")]
         Task<ResponseObject<GameResponse>> GamesGet();

@@ -11,6 +11,13 @@
 
             <!--#region ViewCellTemplates-->
 
+            <!--#region Statistics-->
+            <DataTemplate x:Key="StatisticsTemplate">
+                <views:StatisticsViewCell />
+            </DataTemplate>
+            <!--#endregion-->
+
+
             <!--#region Local-->
             <DataTemplate x:Key="LocalTemplate">
                 <views:GamesViewCellLocal />
