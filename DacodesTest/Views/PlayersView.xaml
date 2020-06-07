@@ -1,15 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="DacodesTest.Views.PlayersView">
+<ContentPage
+    x:Class="DacodesTest.Views.PlayersView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:DacodesTest.Views"
+    Title="Jugadores">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <CollectionView
+                    IsGrouped="True"
+                    ItemTemplate="{StaticResource PlayersTemplate}"
+                    ItemsSource="{Binding PlayersGroup}">
+                    <CollectionView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ContentView Padding="10">
+                                <Label
+                                    BackgroundColor="Transparent"
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    Text="{Binding Heading}" />
+                            </ContentView>
+                        </DataTemplate>
+                    </CollectionView.GroupHeaderTemplate>
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="3" />
+                    </CollectionView.ItemsLayout>
+                </CollectionView>
+            </StackLayout>
+            <views:LoadingProgress
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding IsBusy}" />
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -69,7 +69,7 @@
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate views:HomeView}" />
     </FlyoutItem>
-    <FlyoutItem Title="Statistics">
+    <FlyoutItem Title="Estadisticas">
         <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="{DynamicResource FontIcons}"
@@ -78,7 +78,7 @@
         </FlyoutItem.Icon>
         <ShellContent ContentTemplate="{DataTemplate views:StatisticsView}" />
     </FlyoutItem>
-    <FlyoutItem Title="Players">
+    <FlyoutItem Title="Jugadores">
         <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="{DynamicResource FontIcons}"

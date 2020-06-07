@@ -142,7 +142,7 @@ namespace DacodesTest.ViewModels
             Groups.Add(groupNoviembre);
             Groups.Add(groupDiciembre);
 
-            GamesGroup = new ObservableCollection<GamesGroup>(Groups);
+            GamesGroup = new ObservableCollection<GamesGroup>(Groups.Where(a => a.Count > 0).ToList());
         }
         #endregion
 
