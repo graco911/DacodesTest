@@ -69,62 +69,62 @@ namespace DacodesTest.ViewModels
         {
             var Groups = new List<GamesGroup>();
 
-            var groupEnero = new GamesGroup(list.Where(a => a.Datetime.Month == 0).ToList())
+            var groupEnero = new GamesGroup(list.Where(a => a.Datetime.Month == 1).ToList())
             {
                 Heading = "Enero"
             };
 
-            var groupFebrero = new GamesGroup(list.Where(a => a.Datetime.Month == 1).ToList())
+            var groupFebrero = new GamesGroup(list.Where(a => a.Datetime.Month == 2).ToList())
             {
                 Heading = "Febrero",
             };
 
-            var groupMarzo = new GamesGroup(list.Where(a => a.Datetime.Month == 2).ToList())
+            var groupMarzo = new GamesGroup(list.Where(a => a.Datetime.Month == 3).ToList())
             {
                 Heading = "Marzo",
             };
 
-            var groupAbril = new GamesGroup(list.Where(a => a.Datetime.Month == 3).ToList())
+            var groupAbril = new GamesGroup(list.Where(a => a.Datetime.Month == 4).ToList())
             {
                 Heading = "Abril",
             };
 
-            var groupMayo = new GamesGroup(list.Where(a => a.Datetime.Month == 4).ToList())
+            var groupMayo = new GamesGroup(list.Where(a => a.Datetime.Month == 5).ToList())
             {
                 Heading = "Mayo",
             };
 
-            var groupJunio = new GamesGroup(list.Where(a => a.Datetime.Month == 5).ToList())
+            var groupJunio = new GamesGroup(list.Where(a => a.Datetime.Month == 6).ToList())
             {
                 Heading = "Junio",
             };
 
-            var groupJulio = new GamesGroup(list.Where(a => a.Datetime.Month == 6).ToList())
+            var groupJulio = new GamesGroup(list.Where(a => a.Datetime.Month == 7).ToList())
             {
                 Heading = "Julio",
             };
 
-            var groupAgosto = new GamesGroup(list.Where(a => a.Datetime.Month == 7).ToList())
+            var groupAgosto = new GamesGroup(list.Where(a => a.Datetime.Month == 8).ToList())
             {
                 Heading = "Agosto",
             };
 
-            var groupSeptiembre = new GamesGroup(list.Where(a => a.Datetime.Month == 8).ToList())
+            var groupSeptiembre = new GamesGroup(list.Where(a => a.Datetime.Month == 9).ToList())
             {
                 Heading = "Septiembre",
             };
 
-            var groupOctubre = new GamesGroup(list.Where(a => a.Datetime.Month == 9).ToList())
+            var groupOctubre = new GamesGroup(list.Where(a => a.Datetime.Month == 10).ToList())
             {
                 Heading = "Octubre",
             };
 
-            var groupNoviembre = new GamesGroup(list.Where(a => a.Datetime.Month == 10).ToList())
+            var groupNoviembre = new GamesGroup(list.Where(a => a.Datetime.Month == 11).ToList())
             {
                 Heading = "Noviembre",
             };
 
-            var groupDiciembre = new GamesGroup(list.Where(a => a.Datetime.Month == 11).ToList())
+            var groupDiciembre = new GamesGroup(list.Where(a => a.Datetime.Month == 12).ToList())
             {
                 Heading = "Diciembre",
             };

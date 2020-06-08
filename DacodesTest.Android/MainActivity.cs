@@ -2,6 +2,9 @@
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Android;
+using DacodesTest.Droid.DependencyServices;
+using Android.Widget;
 
 namespace DacodesTest.Droid
 {
@@ -15,6 +18,8 @@ namespace DacodesTest.Droid
 
             base.OnCreate(savedInstanceState);
 
+            AndroidUtils.Context = this;
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
@@ -26,6 +31,20 @@ namespace DacodesTest.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            const string permission = Manifest.Permission.AccessFineLocation;
+            if (Android.Support.V4.Content.ContextCompat.CheckSelfPermission(this, permission) != Permission.Granted)
+            {
+                Android.Support.V4.App.ActivityCompat.RequestPermissions(this, new string[] { Manifest.Permission.ReadCalendar, Manifest.Permission.WriteCalendar }, 0);
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Permission Granted!!!");
+            }
         }
     }
 }
