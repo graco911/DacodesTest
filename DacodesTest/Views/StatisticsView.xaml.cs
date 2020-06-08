@@ -15,6 +15,11 @@ namespace DacodesTest.Views
             BindingContext = StatisticsViewViewModel = new StatisticsViewViewModel();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
+
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
 

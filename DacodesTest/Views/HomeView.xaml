@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:DacodesTest.Views"
     Title="Home"
     NavigationPage.HasNavigationBar="False">
-    <TabbedPage.Resources>
+    <!--<TabbedPage.Resources>
         <ResourceDictionary>
             <FontImageSource
                 x:Key="COPAMX"
@@ -18,9 +18,9 @@
                 FontFamily="{DynamicResource FontIcons}"
                 Glyph="{x:Static font:IconFont.Play}" />
         </ResourceDictionary>
-    </TabbedPage.Resources>
+    </TabbedPage.Resources>-->
     <TabbedPage.Children>
-        <NavigationPage Title="COPA MX" BarTextColor="White">
+        <!--<NavigationPage Title="COPA MX" BarTextColor="White">
             <NavigationPage.IconImageSource>
                 <OnPlatform x:TypeArguments="FontImageSource">
                     <On Platform="iOS" Value="{StaticResource COPAMX}" />
@@ -39,6 +39,8 @@
             <x:Arguments>
                 <local:ASCENSOMXView />
             </x:Arguments>
-        </NavigationPage>
+        </NavigationPage>-->
+        <local:COPAMXView Title="COPA MX" />
+        <local:ASCENSOMXView Title="ASCENSO MX" />
     </TabbedPage.Children>
 </TabbedPage>
