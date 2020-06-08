@@ -36,9 +36,9 @@
                     <abstractions:CircleImage
                         x:Name="ImageProfile"
                         Grid.Row="0"
-                        Aspect="AspectFit"
+                        Aspect="AspectFill"
                         BorderColor="White"
-                        BorderThickness="1"
+                        BorderThickness="0"
                         FillColor="White"
                         HeightRequest="80"
                         HorizontalOptions="Start"
